@@ -17,6 +17,7 @@
         </service>
 
         <service id="acme.demo.secondary_listener" class="Acme\DemoBundle\EventListener\SecondaryListener">
+            <argument type="service" id="logger" />
             <tag name="kernel.event_listener" event="acme.demo.secondary_event" method="secondaryMethod" />
         </service>
     </services>
